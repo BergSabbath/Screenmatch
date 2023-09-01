@@ -29,16 +29,16 @@ public class Titulo {
         return duracaoEmMinutos;
     }
 
+    public void setDuracaoEmMinutos(int duracaoEmMinutos){
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
+
     public boolean getIncluidoNoPlano(){
         return incluidoNoPlano;
     }
 
     public void setIncluidoNoPlano(boolean incluidoNPlano){
         this.incluidoNoPlano = incluidoNoPlano;
-    }
-
-    public void setDuracaoEmMinutos(int duracaoEmMinutos){
-        this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
     public int getTotalDeAvaliacoes(){
