@@ -6,11 +6,11 @@ public class CalculadoraDeTempo {
 
     private int tempoTotal;
 
-    public void inclui(Titulo titulo){
+    public void inclui(Titulo titulo) {
         tempoTotal += titulo.getDuracaoEmMinutos();
     }
 
-    public int getTempoTotal(){
+    public int getTempoTotal() {
         return tempoTotal;
     }
 }
