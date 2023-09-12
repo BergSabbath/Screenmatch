@@ -3,10 +3,11 @@ import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
+import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-
+        // filmes
         Filme meuFilme = new Filme();
         meuFilme.setNome("O poderoso chefão");
         meuFilme.setAnoDeLancamento(1970);
@@ -19,12 +20,28 @@ public class Principal {
         favorito.setDuracaoEmMinutos(135);
         favorito.setIncluidoNoPlano(true);
 
-        Filme outro = new Filme();
-        outro.setNome("John Wick");
-        outro.setAnoDeLancamento(2014);
-        outro.setDuracaoEmMinutos(101);
-        outro.setIncluidoNoPlano(true);
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("John Wick");
+        outroFilme.setAnoDeLancamento(2014);
+        outroFilme.setDuracaoEmMinutos(101);
+        outroFilme.setIncluidoNoPlano(true);
 
+        var filmeDopaulo = new Filme();
+        filmeDopaulo.setDuracaoEmMinutos(200);
+        filmeDopaulo.setNome("Dogville");
+        filmeDopaulo.setAnoDeLancamento(2003);
+        filmeDopaulo.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDopaulo);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+        System.out.println("Tamanho da lista "+ listaDeFilmes.size());
+        System.out.println("Primeiro filme "+ listaDeFilmes.get(0).getNome());
+        //System.out.println(("listar todos os filmes" + listaDeFilmes.));
+
+
+        // series
         Serie serie = new Serie();
         serie.setNome("La casa de Papel");
         serie.setAnoDeLancamento(2017);
@@ -36,7 +53,7 @@ public class Principal {
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         calculadora.inclui(favorito);
-        calculadora.inclui(outro);
+        calculadora.inclui(outroFilme);
         calculadora.inclui(serie);
         System.out.println("Tempo total:" + calculadora.getTempoTotal());
 
@@ -50,6 +67,7 @@ public class Principal {
         System.out.println("Total de avaliações " + meuFilme.getTotalDeAvaliacoes());
         System.out.println(meuFilme.pegaMedia());
 
+        //serie
         Serie lost = new Serie();
         lost.setNome("Lost");
         lost.setAnoDeLancamento(2000);
@@ -59,6 +77,7 @@ public class Principal {
         lost.setMinutosPorEpisodio(50);
         System.out.println("Duração para maratonar Lost " + lost.getDuracaoEmMinutos());
 
+        //episodio
         Episodio episodio = new Episodio();
         episodio.setNumero(1);
         episodio.setSerie(lost);
