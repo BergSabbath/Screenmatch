@@ -8,25 +8,22 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
         // filmes
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O poderoso chefão");
+        Filme meuFilme = new Filme("O poderoso chefão");
         meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
         System.out.println("Duração do filme " + meuFilme.getDuracaoEmMinutos());
 
-        Filme favorito = new Filme();
-        favorito.setNome("The Matrix");
+        Filme favorito = new Filme("The Matrix");
         favorito.setAnoDeLancamento(1999);
         favorito.setDuracaoEmMinutos(135);
         favorito.setIncluidoNoPlano(true);
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("John Wick");
+        Filme outroFilme = new Filme("John Wick");
         outroFilme.setAnoDeLancamento(2014);
         outroFilme.setDuracaoEmMinutos(101);
         outroFilme.setIncluidoNoPlano(true);
 
-        var filmeDopaulo = new Filme();
+        var filmeDopaulo = new Filme("Dogville");
         filmeDopaulo.setDuracaoEmMinutos(200);
         filmeDopaulo.setNome("Dogville");
         filmeDopaulo.setAnoDeLancamento(2003);
@@ -38,7 +35,9 @@ public class Principal {
         listaDeFilmes.add(outroFilme);
         System.out.println("Tamanho da lista "+ listaDeFilmes.size());
         System.out.println("Primeiro filme "+ listaDeFilmes.get(0).getNome());
-        //System.out.println(("listar todos os filmes" + listaDeFilmes.));
+        System.out.println(listaDeFilmes);
+        System.out.println(("toString do filme " + listaDeFilmes.get(0).toString()));
+        System.out.println("___________________________________________________");
 
 
         // series
