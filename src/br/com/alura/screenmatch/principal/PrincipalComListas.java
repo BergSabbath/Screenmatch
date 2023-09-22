@@ -25,9 +25,10 @@ public class PrincipalComListas {
         lista.add(lost);
         for (Titulo item: lista) {
             System.out.println(item.getNome());
+            if(item instanceof Filme filme && filme.getClassificacao() >2 ){
+                System.out.println("Classificação: " + filme.getClassificacao());
+            }
 
-            Filme filme = (Filme) item;
-            System.out.println("Classificação: " + ((Filme) item).getClassificacao());
         }
 
 //        lista.forEach(nome -> System.out.println(nome));
