@@ -77,5 +77,10 @@ public class Principal {
         filtro.filtra(episodio);
 
 
+        Filme filme1 = new Filme("Manoel", 2009);
+        Filme filme2 = new Filme("Pedro", 1999);
+        Filme filme3 = filme1;
+
+        System.out.println(filme3);
     }
 }
